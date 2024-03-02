@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <msq xmlns="http://www.msefi.com/:msq">
-<bibliography author="TunerStudio MS Lite! 3.1.08 - EFI Analytics, Inc." tuneComment="" writeDate="Sat Feb 24 17:27:50 GMT 2024"/>
+<bibliography author="TunerStudio MS 3.1.08 - EFI Analytics, Inc." tuneComment="" writeDate="Sat Mar 02 20:44:18 GMT 2024"/>
 <versionInfo fileFormat="5.0" firmwareInfo="MS2%2FExtra+3.4.4+release++20201006+18%3A17BST%28c%29KC%2FJSM%2FJB++++uS" nPages="7" signature="MS2Extra comms342hU"/>
 <page>
 <pcVariable name="tsCanId">"0"</pcVariable>
@@ -10,6 +10,23 @@
 <pcVariable digits="0" name="rpmdang" units="rpm">12000.0</pcVariable>
 <pcVariable digits="0" name="loadhigh">400.0</pcVariable>
 <pcVariable name="clt_exp">"Normal"</pcVariable>
+<pcVariable name="tsSpeedSource">"GPS Speed"</pcVariable>
+<pcVariable digits="0" name="tsPrimaryInjectorSize">0.0</pcVariable>
+<pcVariable name="tsInjSizeConstant">"cc/min"</pcVariable>
+<pcVariable name="tsLogPowerFields">"Log HP &amp; Tq"</pcVariable>
+<pcVariable name="tsLogPerfFields">"Off"</pcVariable>
+<pcVariable name="tsFuelConsumptionUnits">"US Gallons"</pcVariable>
+<pcVariable name="tsDistanceUnits">"Miles Per Hour"</pcVariable>
+<pcVariable digits="0" name="tsVehicleWeight">3450.0</pcVariable>
+<pcVariable name="tsWeightUnits">"lbs"</pcVariable>
+<pcVariable digits="2" name="tsVehicleDragCoef">0.34</pcVariable>
+<pcVariable digits="0" name="tsTirePressure" units="psi">32.0</pcVariable>
+<pcVariable digits="1" name="tsFrontalArea">19.3</pcVariable>
+<pcVariable name="tsFrontalUnits">"sqft"</pcVariable>
+<pcVariable digits="1" name="tsTireDiameter" units="in">25.5</pcVariable>
+<pcVariable digits="2" name="tsTransGearRatio" units=":1">1.0</pcVariable>
+<pcVariable digits="2" name="tsFinalDriveRatio" units=":1">3.7</pcVariable>
+<pcVariable digits="0" name="tsEtRollOut" units="in">0.0</pcVariable>
 <pcVariable cols="1" digits="1" name="wueAfrTargetOffset" rows="10" units=":1">
          -1.5 
          -1.1 
@@ -116,15 +133,15 @@
          13.0 12.9 12.9 12.8 12.8 12.7 12.6 12.5 12.5 12.2 12.2 12.2 
       </constant>
 <constant cols="1" digits="0" name="wueBins" rows="10" units="%">
-         180.0 
-         180.0 
-         160.0 
-         150.0 
-         135.0 
-         125.0 
-         113.0 
-         108.0 
-         102.0 
+         230.0 
+         230.0 
+         214.0 
+         198.0 
+         181.0 
+         165.0 
+         149.0 
+         133.0 
+         116.0 
          100.0 
       </constant>
 <constant cols="1" digits="1" name="taeBins" rows="4" units="ms">
@@ -339,7 +356,7 @@
 <constant digits="0" name="egoLimit" units="%">15.0</constant>
 <constant digits="1" name="stoich" units="AFR">14.7</constant>
 <constant name="enable_pollADC03">"Disable"</constant>
-<constant name="enable_pollADC47">"Disable"</constant>
+<constant name="enable_pollADC47">"Enable"</constant>
 <constant name="enable_pollPWM">"Disable"</constant>
 <constant name="enable_pollports">"Disable"</constant>
 <constant digits="0" name="poll_tableADC03">7.0</constant>
@@ -389,7 +406,7 @@
 <constant digits="1" name="oddfireangs5">60.0</constant>
 <constant digits="1" name="oddfireangs6">60.0</constant>
 <constant digits="0" name="can_poll_id0">5.0</constant>
-<constant digits="0" name="can_poll_id1">5.0</constant>
+<constant digits="0" name="can_poll_id1">7.0</constant>
 <constant digits="0" name="can_poll_id2">5.0</constant>
 <constant digits="0" name="can_poll_id3">5.0</constant>
 <constant digits="0" name="hw_latency" units="usec">0.0</constant>
@@ -1233,18 +1250,18 @@
 </page>
 <page number="2" size="1024">
 <constant cols="12" digits="1" name="advanceTable1" rows="12" units="deg">
-         13.0 11.0 11.0 11.0 12.6 14.1 15.4 16.5 17.4 18.0 18.4 18.6 
-         13.0 11.0 11.0 11.0 12.6 14.0 15.3 16.4 17.3 17.9 18.3 18.5 
-         13.0 11.0 11.0 11.0 12.6 14.0 15.3 16.3 17.2 17.8 18.2 18.4 
-         13.0 11.0 11.0 11.0 12.6 14.0 15.2 16.2 17.1 17.7 18.1 18.3 
-         13.0 11.0 11.0 11.0 12.6 14.0 15.2 16.2 17.0 17.6 18.0 18.1 
-         13.0 11.0 11.0 11.0 12.5 13.9 15.1 16.1 16.9 17.4 17.8 18.0 
-         13.0 11.0 11.0 11.0 12.5 13.8 15.0 16.0 16.8 17.3 17.7 17.9 
-         13.0 11.0 11.0 11.0 12.5 13.8 14.9 15.9 16.7 17.2 17.6 17.8 
-         13.0 11.0 11.0 11.0 12.4 13.7 14.9 15.8 16.6 17.1 17.5 17.7 
-         13.0 11.0 11.0 11.0 12.4 13.7 14.8 15.8 16.5 17.1 17.4 17.6 
-         13.0 11.0 11.0 11.0 12.4 13.7 14.8 15.7 16.5 17.0 17.4 17.5 
-         13.0 11.0 11.0 11.0 12.4 13.7 14.8 15.8 16.5 17.1 17.4 17.6 
+         13.0 11.5 11.5 11.5 12.6 14.1 15.4 16.5 17.4 18.0 18.4 18.6 
+         13.0 11.5 11.5 11.5 12.6 14.0 15.3 16.4 17.3 17.9 18.3 18.5 
+         13.0 11.5 11.5 11.5 12.6 14.0 15.3 16.3 17.2 17.8 18.2 18.4 
+         13.0 11.5 11.5 11.5 12.6 14.0 15.2 16.2 17.1 17.7 18.1 18.3 
+         13.0 11.5 11.5 11.5 12.6 14.0 15.2 16.2 17.0 17.6 18.0 18.1 
+         13.0 11.5 11.5 11.5 12.5 13.9 15.1 16.1 16.9 17.4 17.8 18.0 
+         13.0 11.5 11.5 11.5 12.5 13.8 15.0 16.0 16.8 17.3 17.7 17.9 
+         13.0 11.5 11.5 11.5 12.5 13.8 14.9 15.9 16.7 17.2 17.6 17.8 
+         13.0 11.5 11.5 11.5 12.4 13.7 14.9 15.8 16.6 17.1 17.5 17.7 
+         13.0 11.5 11.5 11.5 12.4 13.7 14.8 15.8 16.5 17.1 17.4 17.6 
+         13.0 11.5 11.5 11.5 12.4 13.7 14.8 15.7 16.5 17.0 17.4 17.5 
+         13.0 11.5 11.5 11.5 12.4 13.7 14.8 15.8 16.5 17.1 17.4 17.6 
       </constant>
 <constant cols="12" digits="1" name="advanceTable2" rows="12" units="deg">
          0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
@@ -1754,6 +1771,7 @@
       </constant>
 <constant digits="0" name="can_outpc_msg">1520.0</constant>
 <constant name="can_outpc_gp00_master">"Off"</constant>
+<constant name="can_outpc_gp00_int">"1Hz"</constant>
 <constant name="can_outpc_gp00">"Off"</constant>
 <constant name="can_outpc_gp01">"Off"</constant>
 <constant name="can_outpc_gp02">"Off"</constant>
